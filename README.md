@@ -5,7 +5,7 @@ This is an example of ansible pull
 
 ### Install necessary packages ... git and ansible
 
-`$ sudo apt install git ansible`
+`$ sudo apt install git ansible cron`
 
 ### Run `ansible-pull` where U specifies HTML URL
 
