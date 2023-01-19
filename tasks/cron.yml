@@ -9,3 +9,11 @@
       --vault-password-file "$(HOME)/.vault_key" 
       -i "$(hostname --short)," 
       > /tmp/ansible-pull.log 2>&1
+
+- name: Install Dummy commented cron job for testing
+  cron:
+    user: ansible
+    name: "Dummy test job"
+    minute: "*"
+    job: env > /tmp/env.output
+    disabled: true
