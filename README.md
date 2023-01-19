@@ -47,4 +47,20 @@ This is an example of ansible pull
 
 `$ sudo ansible-pull -U https://github.com/nospam1961/ansible_pull_tutorial.git --vault-password-file ~/.vault_key -i "$(hostname --short),""`
 
+## Since cron job runs under user ansible
 
+### Copy .vault_key to ansible home
+
+`$ sudo cp ~/.vault_key /home/ansible/.vault_key`
+
+### Change .vault_key to 600
+
+`$ sudo chmod 600 /home/ansible/.vault_key` 
+
+### Change owner of .vault_key in ansible home to be ansible user
+
+`$ sudo chown ansible:ansible /home/ansible/.vault_key`
+
+### Permissions and owner should be changed
+
+`$ sudo ls -la /home/ansible/.vault_key`
