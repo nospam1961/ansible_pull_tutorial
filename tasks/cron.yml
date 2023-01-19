@@ -16,4 +16,4 @@
     name: "Dummy test job"
     minute: "*"
     job: env > /tmp/env.output
-    disabled: true
+    disabled: false
