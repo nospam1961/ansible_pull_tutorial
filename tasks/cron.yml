@@ -4,8 +4,8 @@
     name: "ansible provision"
     minute: "*/10"
     job: >
-      "/usr/bin/ansible-pull -o 
+      /usr/bin/ansible-pull -o 
       -U https://github.com/nospam1961/ansible_pull_tutorial.git 
-      --vault-password-file /home/ansible/.vault_key 
-      -i \"$(hostname --short),\" 
-      > /tmp/ansible-pull.log 2>&1"
+      --vault-password-file "$(HOME)/.vault_key" 
+      -i "$(hostname --short)," 
+      > /tmp/ansible-pull.log 2>&1
