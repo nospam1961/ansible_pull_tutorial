@@ -45,7 +45,7 @@ This is an example of ansible pull
 
 ## Run ansible-pull with ansible vault key (MAKE SURE ~/.vault_key IS COPIED TO EVERY SERVER / WS THAT WILL RUN ansible-pull)
 
-`$ sudo ansible-pull -U https://github.com/nospam1961/ansible_pull_tutorial.git --vault-password-file ~/.vault_key -i "$(hostname --short),""`
+`$ sudo ansible-pull -U https://github.com/nospam1961/ansible_pull_tutorial.git --vault-password-file /home/ansible/.vault_key -i "$(hostname --short),"`
 
 ## Since cron job runs under user ansible
 
