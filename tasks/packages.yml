@@ -5,5 +5,5 @@
       - htop
       - mc
       - tmux
-      # - vim-nox
+      - vim-nox
 
